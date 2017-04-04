@@ -7,8 +7,9 @@ AND Produit.Id_produit=Potion.Id_produit
 AND Type_Diluant=...
 
 
-                          QUATRIEME REQUETE RECHERCHE
-
-SELECT Potion.Nom_Potion, Potion.Temperature_Potion
-FROM Potion
-ORDER BY Temperature ASC
+                        
+-------------------------REQUETE 4 TEMPERATURE----------------------------------- 
+SELECT Produit.Nom, Potion.Temperature_potion
+FROM Produit, Potion
+WHERE Produit.Id_produit=Potion.Id_produit
+ORDER BY Temperature_potion ASC
