@@ -1,0 +1,9 @@
+
+                DELIMITER |
+                Create procedure expiration()
+                BEGIN
+                DELETE FROM stock
+                WHERE DATEDIFF(CURDATE(),Date_Arrivee)>=DATEDIFF(Date_sortie,Date_Arrivee);
+                SELECT * 
+                FROM stock;
+                END |
