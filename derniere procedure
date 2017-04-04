@@ -1,0 +1,17 @@
+
+                DELIMITER |
+                Create procedure validation(IN choix_commande INT)
+                BEGIN
+                UPDATE commande
+                SET commande.Id_etat=2
+                WHERE choix_commande=commande.id_commande;
+                UPDATE stock,commande,utilise
+                SET Stock.quantite=Stock.quantite-1
+                WHERE commande.Id_etat=2
+                IN
+                (SELECT commande.id_commande
+                from utilise,commande
+                WHERE stock.Id_stock=utilise.id_stock
+                AND commande.id_commande=utilise.id_commande);
+                END|
+              
