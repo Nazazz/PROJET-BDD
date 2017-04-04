@@ -1,0 +1,12 @@
+                            TROISIEME REQUETE RECHERCHE
+
+SELECT Potion.Nom_potion, Diluant.Type_Diluant
+FROM Potion, Diluant
+WHERE Potion.ID_Diluant=Diluant.ID_Diluant
+AND Type_Diluant=...
+
+                          QUATRIEME REQUETE RECHERCHE
+
+SELECT Potion.Nom_Potion, Potion.Temperature_Potion
+FROM Potion
+ORDER BY Temperature ASC
