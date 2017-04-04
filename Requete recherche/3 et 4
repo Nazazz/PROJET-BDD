@@ -1,9 +1,11 @@
                             TROISIEME REQUETE RECHERCHE
-
-SELECT Potion.Nom_potion, Diluant.Type_Diluant
-FROM Potion, Diluant
+                            
+SELECT Potion.ID_potion, Diluant.Type_Diluant, Produit.Nom
+FROM Potion, Diluant, Produit
 WHERE Potion.ID_Diluant=Diluant.ID_Diluant
+AND Produit.Id_produit=Potion.Id_produit
 AND Type_Diluant=...
+
 
                           QUATRIEME REQUETE RECHERCHE
 
