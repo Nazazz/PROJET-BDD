@@ -1,0 +1,10 @@
+
+       DELIMITER |
+        Create procedure stock(IN ID_ADD INT,IN Nbr_ADD INT)
+        BEGIN
+        UPDATE stock
+        SET Quantite=Quantite+Nbr_ADD
+        WHERE Id_stock=ID_ADD;
+        SELECT *
+        FROM stock;
+        END |
