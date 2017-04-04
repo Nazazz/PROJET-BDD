@@ -1,0 +1,10 @@
+
+
+               DELIMITER |
+                Create procedure commande()
+                BEGIN
+                SELECT commande.ID_commande,commande.numero_commande,commande.date_commande,commande.prix_commande,client.ID_client,client.nom
+                FROM commande,client,achete
+                WHERE client.ID_client=achete.ID_client
+                AND commande.ID_commande=achete.ID_commande;
+                END |
