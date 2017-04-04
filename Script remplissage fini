@@ -419,7 +419,7 @@ CREATE TABLE se_compose(
         PRIMARY KEY (ID_proposition ,Id_ingredient ,Id_produit )
 )ENGINE=InnoDB;
 
-INSERT INTO compose(`ID_proposition`,`Id_ingredient`,`Id_produit`) VALUES
+INSERT INTO se_compose(`ID_proposition`,`Id_ingredient`,`Id_produit`) VALUES
 ('1','12','12'),
 ('1','1','1'),
 ('1','5','5');
