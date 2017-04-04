@@ -80,8 +80,10 @@ CREATE TABLE Commande(
 
 
 INSERT INTO Commande(`Numero_commande`,`Date_commande`,`prix_commande`,`Id_etat`) VALUES 
-('1','2017/03/31', '2400', '1'),
-('2','2017/04/02', '1700', '2');
+('1','2017/03/31', '2600', '1'),
+('2','2017/04/02', '1800', '2'),
+('3','2017/04/03', '2499','2'),
+('4','2017/04/04','892.5','1');
 #------------------------------------------------------------
 # Table: Proposition
 #------------------------------------------------------------
@@ -284,11 +286,11 @@ INSERT INTO Produit(`Nom`,`Prix_produit`) VALUES
 ('PatteSauterelle','25'),
 ('QueueMammouth','300'),
 ('AilePhoenix','1000'),
-('elexirRage','940'),
-('lotionAmour','980'),
-('potionResurection','490'),
-('potionAntidote','230'),
-('potionMemoire','425'),
+('elexirRage','987'),
+('lotionAmour','1029'),
+('potionResurection','514.5'),
+('potionAntidote','241.5'),
+('potionMemoire','446.25'),
 ('cremeInvisibilite','850'),
 ('cremeVolante','1060'),
 ('cremeDeMort','925'), 
@@ -315,8 +317,9 @@ CREATE TABLE Achete(
 
 INSERT INTO Achete(`ID_client`,`ID_commande`) VALUES
 ('1','1'),
-('2','2');
-
+('2','2'),
+('4','3'),
+('3','4');
 #------------------------------------------------------------
 # Table: soumet
 #------------------------------------------------------------
@@ -406,8 +409,9 @@ INSERT INTO utilise(`ID_commande`,`Id_stock`) VALUES
 ('1','8'),
 ('1','9'),
 ('2','10'),
-('2','11');
-
+('2','11'),
+('3','8'),
+('4','')
 #------------------------------------------------------------
 # Table: se compose 
 #------------------------------------------------------------
@@ -549,4 +553,5 @@ ALTER TABLE contient CHANGE Id_produit Id_produit_potion Int;
 ALTER TABLE contient CHANGE Id_produit_Produit Id_produit_ingredient Int;
 ALTER TABLE possede CHANGE Id_produit Id_produit_ingredient Int;
 ALTER TABLE possede CHANGE Id_produit_Produit Id_produit_onguent Int;
+
 
