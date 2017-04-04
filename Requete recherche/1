@@ -1,0 +1,18 @@
+                                      PREMIERE REQUETE RECHERCHE
+
+SELECT Produit.Nom, Potion.Id_Potion
+FROM Produit, Potion, Ingredient, contient
+WHERE Produit.Id_produit=Potion.Id_produit
+AND Potion.Id_Potion=contient.Id_potion
+AND contient.Id_ingredient=Ingredient.Id_ingredient
+AND Ingredient.Id_ingredient= '9';
+
+
+
+
+SELECT Produit.Nom, Onguent.Id_onguent
+FROM Produit, Ingredient, possede ,Onguent
+WHERE produit.Id_produit=Onguent.Id_produit
+AND Onguent.Id_Onguent=possede.Id_onguent
+AND possede.Id_ingredient=Ingredient.Id_ingredient
+AND Ingredient.Id_ingredient= '9';
