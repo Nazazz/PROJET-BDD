@@ -1,0 +1,8 @@
+                                              SIXIEME REQUETE RECHERCHE
+
+SELECT AVG(Ing.NbrePotion)
+FROM (
+SELECT COUNT(contient.Id_ingredient) NbrePotion
+FROM contient
+GROUP BY ID_potion
+) Ing;
