@@ -1,0 +1,16 @@
+                            CINQUIEME REQUETE RECHERCHE
+
+SELECT Produit.Nom, Produit.Prix_produit, SUM(Produit2.Prix_produit)
+FROM (Potion INNER JOIN Produit ON (Potion.Id_produit = Produit.Id_produit))
+              INNER JOIN contient ON (Potion.Id_produit = contient.Id_produit_potion)
+              INNER JOIN Produit AS Produit2 ON (Produit2.Id_produit = contient.Id_ingredient)
+GROUP BY Produit.Nom;
+
+                            VUE POUR COMPARAISON
+
+Create view Comparaison As
+SELECT Produit.Nom, Produit.Prix_produit, SUM(Produit2.Prix_produit)
+FROM (Potion INNER JOIN Produit ON (Potion.Id_produit = Produit.Id_produit))
+              INNER JOIN contient ON (Potion.Id_produit = contient.Id_produit_potion)
+              INNER JOIN Produit AS Produit2 ON (Produit2.Id_produit = contient.Id_ingredient)
+GROUP BY Produit.Nom;
