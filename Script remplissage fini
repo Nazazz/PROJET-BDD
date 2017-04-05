@@ -287,7 +287,7 @@ INSERT INTO Produit(`Nom`,`Prix_produit`) VALUES
 ('QueueMammouth','300'),
 ('AilePhoenix','1000'),
 ('elexirRage','987'),
-('lotionAmour','1029'),
+('lotionAmour','892.5'),
 ('potionResurection','514.5'),
 ('potionAntidote','241.5'),
 ('potionMemoire','446.25'),
@@ -467,16 +467,16 @@ INSERT INTO contient(`Quantite_ingredient`,`Id_potion`,`Id_produit`,`Id_ingredie
 ('1','1','16','11','11'),
 ('1','1','16','7','7'),
 ('1','1','16','5','5'),
-('1','2','17','4','4'),
+('1','2','17','3','3'),
 ('1','2','17','10','10'),
 ('1','3','18','9','9'),
 ('1','3','18','6','6'),
-('1','4','19','3','3'),
+('1','4','19','4','4'),
 ('1','4','19','2','2'),
 ('1','4','19','12','12'),
 ('1','4','19','9','9'),
 ('1','5','20','1','1'),
-('1','5','20','4','4');
+('1','5','20','3','3');
 #------------------------------------------------------------
 # Table: possede 
 #------------------------------------------------------------
@@ -553,5 +553,4 @@ ALTER TABLE contient CHANGE Id_produit Id_produit_potion Int;
 ALTER TABLE contient CHANGE Id_produit_Produit Id_produit_ingredient Int;
 ALTER TABLE possede CHANGE Id_produit Id_produit_ingredient Int;
 ALTER TABLE possede CHANGE Id_produit_Produit Id_produit_onguent Int;
-
 
